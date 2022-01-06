@@ -1,0 +1,111 @@
+@use '../../../Themes/theme1';
+@import "../../../variables";
+@import "../../../Themes/theme1";
+@include angular-material-theme($candy-app-theme);
+@import "../../../reset";
+@import "../../breakpoints";
+// @import "../../mixins";
+@mixin formulario1() {
+  color: $black;
+  padding: 10px;
+  border-radius: 5px;
+  // background-color: $transparentBlack;
+  background-color: rgba(245, 245, 245, 0.877);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+@include media(mobile, sm, cards) {
+  .formulario1 {
+    max-width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .dousprimeiros {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+  }
+}
+@include media(desktop) {
+  .formulario1 {
+    max-width: 65%;
+    margin-left: 10%;
+    .selectsGroup1 {
+      margin-left: 20px;
+    }
+  }
+  .dousprimeiros {
+    justify-content: flex-start;
+  }
+}
+@mixin wrong-field() {
+  margin-left: 20px;
+  margin-top: 40px;
+  font-style: oblique;
+  color: $warnColor;
+}
+// :host,
+// :host-context(.mat-header) {
+//   width: 100%;
+// }
+.miniHotelsFormContainer {
+  width: 100%;
+  // height: 115%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  // background-color: #ece9e3;
+  // background: url(./../../../assets/landscapes/aldan.jpg)
+  // no-repeat center center fixed;
+  background: {
+    image: url("./../../../assets/landscapes/rochas.jpg");
+    size: cover;
+    repeat: no-repeat;
+    position: center;
+    attachment: fixed;
+    }
+  .formulario1 {
+    max-height: 70%;
+    @include formulario1();
+    box-sizing: border-box;
+  }
+  .show {
+    opacity: 1;
+    transition: opacity 1s;
+    margin-right: 5px;
+    padding-top: 2px;
+  }
+  .hide {
+    opacity: 0;
+    transition: opacity 1s;
+  }
+  .childrenWidth50 > * {
+    width: $childrenWidth50;
+  }
+  .wrong-field {
+    @include wrong-field();
+  }
+  .selectsGroup1 {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    .miniSelect {
+      max-width: 100px;
+    }
+    .buttonSpace {
+      padding-top: 15px;
+      padding-left: 10px;
+    }
+  }
+  .leg1 {
+    display: flex;
+    .logo {
+      width: 50px;
+      height: 50px;
+    }
+    h2 {
+      padding-top: 10px;
+      margin-left: 10px;
+      line-height: -20px;
+    }
+  }
+}

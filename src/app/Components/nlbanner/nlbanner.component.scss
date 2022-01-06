@@ -1,0 +1,43 @@
+@import "../../../variables";
+@import "../../../Themes/theme1";
+@include angular-material-theme($candy-app-theme);
+@import "../../../reset";
+@import "../../breakpoints";
+@include media(mobile){
+    .insidehr {
+        margin-left: 15px;
+        margin-right: 5px;
+    }
+    .nlbanner{
+        display: none;
+    }
+}
+@include media(sm){
+    .nlbanner{
+        display: block;
+    }
+    hr{
+        display: none;
+    }
+    .nlbanner{
+        box-shadow: 10px 10px 20px #d9d9d9, -10px -10px 20px #ffffff;
+    }
+    .insidehr {
+        margin-left: 25%;
+    }
+}
+
+.insidehr {
+    display: flex;
+    flex-flow: row wrap;
+}
+.hs {
+    margin-right: 5%;
+}
+.nlsubmit {
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+h3 {
+    font-weight: bold;
+}

@@ -1,0 +1,80 @@
+@import "../../../Themes/theme1";
+@import "~@angular/material/theming";
+@include angular-material-color($dark-theme);
+.div.all {
+    background-color: #f57280;
+}
+h2 {
+    margin-left: 17%;
+    margin-top: 40px;
+    font-size: 28px;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+mdb-card.eachcard {
+    max-width: 300px;
+    max-height: 350px;
+    margin-bottom: 20px;
+    margin-right: 20px;
+    box-shadow: 5px 10px #ff8e8e;
+    -webkit-box-shadow: 5px 5px 9px 1px #f57280;
+    box-shadow: 5px 5px 9px 1px #f57280;
+    // border-radius: 0px;
+    // background: #ffffff;
+    // box-shadow: inset 5px 5px 10px #808080,
+    //             inset -5px -5px 10px #ffffff;
+    box-sizing: border-box;
+    &:hover {
+        opacity: 0.8;
+    }
+    .imgdiv {
+        height: 250px;
+        mdb-card-img.ht {
+            height: 250px;
+            // max-height: 250px;
+        }
+    }
+    span.starting {
+        // width: 75px;
+        font-size: 20px;
+        padding: 5px;
+        font-weight: 800;
+        margin-left: 7%;
+    }
+    mdb-card-body {
+        line-height: 80%;
+        .hotelName{
+            h3{
+                
+            font-weight: 500;
+            font-size: 17px;
+            &:hover{
+                font-weight: 600;
+                // font-size: 20px;
+            }
+        }
+        }
+    }
+}
+
+div.offers {
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: center;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+button.offers {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    margin-top: 2px;
+    margin-right: 2px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+.unicorn-dark-theme {
+    font-weight: 800;
+    color: mat-color($dark-warn);
+    // color: mat-color($dark-accent);
+}

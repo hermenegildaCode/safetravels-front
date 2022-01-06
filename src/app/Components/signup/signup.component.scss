@@ -1,0 +1,56 @@
+@use '../../../Themes/theme1';
+@import "../../../variables";
+@import "../../../Themes/theme1";
+@import "~@angular/material/theming";
+@include angular-material-color($dark-theme);  
+@import "~@angular/cdk/text-field/text-field";
+@import "../home/home.component.scss";
+@import "../../../reset";
+@import "../../breakpoints";
+///@group variables:
+$warn: #ff1744;
+$link-color: $warnColor;
+@include media(mobile, sm, md) {
+.mat-form-field-flex, .mat-form-field-wrapper{
+    max-width: 90% !important;
+}
+.signupForm{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+button.btn-ext{
+    margin-left: 10px;
+    width: 220px;
+}
+}
+@include media(desktop){
+    .mat-form-field-flex, .mat-form-field-wrapper{
+        max-width: 100%;
+}
+.signupForm{
+    @include formulario(0);
+    display: flex;
+    flex-flow: column wrap;
+}
+button.btn-ext{
+    margin-left: 30px;
+}
+}
+
+.color-warn{
+    color:$warnColor;
+}
+.bg-warn{
+    background-color:$warnColor;
+    color: white;
+}
+
+
+.wrong-field{
+    @include wrong-field();
+}
+.unicorn-dark-theme {
+    @include angular-material-color($dark-theme);
+  }

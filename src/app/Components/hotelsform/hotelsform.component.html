@@ -1,0 +1,127 @@
+<div class="appHotelsFormContainer">
+    <form #searchForm="ngForm" [formGroup]="range" class="formulario col-xs-8 col-sm-10 col-md-6 col-bg-5">
+        <!-- {{searchForm.value | json}} -->
+        <legend class="leg">
+            <a [routerLink]="['/home']" routerLinkActive="router-link-active"><img class="logo" src="../favicon.ico"
+                    alt="logo"></a>
+            <h1>
+                Discover Galicia Safely
+            </h1>
+        </legend>
+        <h2>Book the best and safest hotels and rooms</h2>
+        <div class="form-group">
+            <mat-form-field appearance="outline" title="Search by Hotel's name, region, provinces or cities">
+                <mat-label class="help-block">
+                    Where?
+                </mat-label>
+                <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of options" [value]="option">
+                        {{option}}
+                    </mat-option>
+                </mat-autocomplete>
+                <!-- <mat-autocomplete #auto="matAutocomplete">
+                    <mat-option *ngFor="let hotelname of hotelList$ | async" [value]="hotelname">
+                      {{hotelname}}
+                    </mat-option>
+                  </mat-autocomplete> -->
+                <mat-icon matSuffix color="warn">search</mat-icon>
+                <input matInput type="search" [class.is-invalid]="searchInput.invalid && searchInput.touched" required
+                    [matAutocomplete]="auto" formControlName="searchInput"
+                    placeholder="Search Hotels">
+            </mat-form-field>
+            <small class="wrong-field" *ngIf="searchInput.touched && searchInput.invalid">Search field is
+                required</small>
+        </div>
+        <!-- hacer unselect que dependiendo del valor de la vble llame luego en el ts a un endpoint u otro.  -->
+        <div class="selectsGroup">
+            <div class="form-group mr-2 mb-2">
+                <mat-form-field appearance="outline">
+                    <mat-label class="help-block">
+                        Check-in - Check-out
+                    </mat-label>
+                    <mat-date-range-input [rangePicker]="picker">
+                        <input matStartDate formControlName="fechaInicio" >
+                        <input matEndDate  formControlName="fechaFin" >
+                    </mat-date-range-input>
+                    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                    <mat-date-range-picker #picker></mat-date-range-picker>
+                </mat-form-field>
+            </div>
+
+            <div class="form-group miniSelect mb-2 col-xs-6 col-sm-3 col-md-2 col-bg-1">
+                <mat-form-field appearance="outline" style="width: 100%;" title="Adults">
+                    <mat-label class="help-block">
+                        Adults
+                    </mat-label>
+                    <mat-select placeholder="2" name="adultsNumber" [(value)]="form.adultsNumber"
+                        [(ngModel)]="form.adultsNumber">
+                        <!-- <mat-option *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+              {{item}}
+            </mat-option> -->
+                        <mat-option value="1">1</mat-option>
+                        <mat-option value="2">2</mat-option>
+                        <mat-option value="3">3</mat-option>
+                        <mat-option value="4">4</mat-option>
+                        <mat-option value="5">5</mat-option>
+                        <mat-option value="6">6</mat-option>
+                        <mat-option value="7">7</mat-option>
+                        <mat-option value="8">8</mat-option>
+                        <mat-option value="9">9</mat-option>
+                        <mat-option value="0">10</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="form-group miniSelect mb-2 col-xs-6 col-sm-7 col-md-2 col-bg-1">
+                <mat-form-field appearance="outline" style="width: 100%;" title="Children">
+                    <mat-label class="help-block">
+                        Children
+                    </mat-label>
+                    <mat-select [(value)]="form.childrenNumber" placeholder="0" [(ngModel)]="form.childrenNumber"
+                        name="childrenNumber">
+                        <!-- <mat-option *ngFor="let item of [0,1,2,3,4,5,6,7,8,9,10]">
+              {{item}}
+            </mat-option> -->
+                        <mat-option value="0">0</mat-option>
+                        <mat-option value="1">1</mat-option>
+                        <mat-option value="2">2</mat-option>
+                        <mat-option value="3">3</mat-option>
+                        <mat-option value="4">4</mat-option>
+                        <mat-option value="5">5</mat-option>
+                        <mat-option value="6">6</mat-option>
+                        <mat-option value="7">7</mat-option>
+                        <mat-option value="8">8</mat-option>
+                        <mat-option value="9">9</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+
+            <div class="form-group miniSelect mb-2 col-xs-7 col-sm-7 col-md-2 col-bg-1">
+                <mat-form-field appearance="outline" style="width: 100%;" title="Rooms">
+                    <mat-label class="help-block">
+                        Rooms
+                    </mat-label>
+                    <mat-select [(value)]="form.roomsNumber" placeholder="1" [(ngModel)]="form.roomsNumber"
+                        name="roomsNumber">
+                        <!-- <mat-option *ngFor="let item of [1,2,3,4,5,6,7,8,9,10]">
+              {{item}}
+            </mat-option> -->
+                        <mat-option value="1">1</mat-option>
+                        <mat-option value="2">2</mat-option>
+                        <mat-option value="3">3</mat-option>
+                        <mat-option value="4">4</mat-option>
+                        <mat-option value="5">5</mat-option>
+                        <mat-option value="6">6</mat-option>
+                        <mat-option value="7">7</mat-option>
+                        <mat-option value="8">8</mat-option>
+                        <mat-option value="9">9</mat-option>
+                        <mat-option value="0">10</mat-option>
+                    </mat-select>
+                </mat-form-field>
+            </div>
+        </div>
+        <button type="submit" [routerLink]="['/hotels', form]" (click)=updateSearchInput() (showBrowserBanners)=dontShowbb()
+            routerLinkActive="router-link-active" [disabled]="!searchForm.valid" mat-raised-button color="accent">Search
+            Hotels!</button>
+    </form>
+</div>

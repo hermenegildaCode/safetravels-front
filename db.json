@@ -1,0 +1,292 @@
+{
+    "users": [
+        {
+            "id": 1,
+            "firstName": "Bill",
+            "lastName": "Gates",
+            "email": "bill@microsoft.com",
+            "password": "abc123.."
+        },
+        {
+            "id": 2,
+            "firstName": "Mark",
+            "lastName": "Zuckerberg",
+            "email": "mark@facebook.com",
+            "password": "abc123.."
+        },
+        {
+            "id": 3,
+            "firstName": "Jeff",
+            "lastName": "Bezos",
+            "email": "jeff@amazon.com",
+            "password": "abc123.."
+        }
+    ],
+    "hotels": [
+        {
+            "id": 1,
+            "name": "La reserva Rotana",
+            "address": "Camino Bendris km 3, 07500 Manacor, Mallorca",
+            "city": "Manacor",
+            "region": "Mallorca",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+            "imgD": "assets/sm/res.jpg",
+            "imgH": "assets/res/res.jpg",
+            "imgH1": "assets/res/res1.jpg",
+            "imgHR": "assets/res/res2.jpg",
+            "singleRooms":20,
+            "doubleRooms": 20,
+            "tripleRooms":10,
+            "rating": 4.5,
+            "price": 300,
+            "stars": 5,
+            "piscina": true,
+            "balneario": false,
+            "wifi": true,
+            "parking": true,
+            "recommended": true,
+            "offer": 20,
+            "reviews": [
+                {
+                    "id": 1,
+                    "user-id": 1,
+                    "user-rating": 5,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                },
+                {
+                    "id": 2,
+                    "user-id": 2,
+                    "user-rating": 4,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                },
+                {
+                    "id": 3,
+                    "user-id": 3,
+                    "user-rating": 4.5,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "name": "Ca Sa Padrina d'Artà",
+            "address": "Calle Convent 5, 07570 Artà, Mallorca",
+            "city": "Artà",
+            "region": "Mallorca",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "imgD": "assets/sm/cas.jpg",
+            "imgH": "assets/casa/casa.jpg",
+            "imgH1": "assets/casa/casa1.jpg",
+            "imgHR": "assets/casa/casa2.jpg",
+            "singleRooms":20,
+            "doubleRooms": 20,
+            "tripleRooms":10,
+            "rating": 4.4,
+            "price": 86,
+            "stars": 3,
+            "piscina": true,
+            "wifi": true,
+            "parking": false,
+            "balneario": false,
+            "recommended": true,
+            "offer": 0,
+            "reviews": [
+                {
+                    "id": 1,
+                    "user-id": 1,
+                    "user-rating": 5,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                },
+                {
+                    "id": 2,
+                    "user-id": 2,
+                    "user-rating": 4,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                },
+                {
+                    "id": 3,
+                    "user-id": 3,
+                    "user-rating": 4.5,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                }
+            ]
+        },
+        {
+            "id": 3,
+            "name": "Hotel Samos",
+            "address": "S'Olivera 12, 07181 Magaluf, Mallorca",
+            "city": "Magaluf",
+            "region": "Mallorca",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+            "imgD": "assets/sm/samos.jpg",
+            "imgH": "assets/samos/samos.jpg",
+            "imgH1": "assets/samos/samos1.jpg",
+            "imgHR": "assets/samos/samos2.jpg",
+            "singleRooms":20,
+            "doubleRooms": 20,
+            "tripleRooms":10,
+            "rating": 4.3,
+            "price": 69,
+            "stars": 4,
+            "wifi": true,
+            "piscina": true,
+            "balneario": false,
+            "parking": false,
+            "recommended": false,
+            "offer": 5,
+            "reviews": [
+                {
+                    "id": 1,
+                    "user-id": 4,
+                    "user-rating": 5,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                },
+                {
+                    "id": 2,
+                    "user-id": 5,
+                    "user-rating": 4,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                },
+                {
+                    "id": 3,
+                    "user-id": 6,
+                    "user-rating": 4.5,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                }
+            ]
+        },
+        {
+            "id": 4,
+            "name": "Parador Hostal Dos Reis Catolicos",
+            "address": "Praza do Obradoiro 1, 15705",
+            "city": "Santiago",
+            "region": "Galicia",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "imgD": "assets/sm/par.jpg",
+            "imgH": "assets/par/par.jpg",
+            "imgH1": "assets/par/par1.jpg",
+            "imgHR": "assets/par/par2.jpg",
+            "singleRooms":20,
+            "doubleRooms": 20,
+            "tripleRooms":10,
+            "rating": 4.5,
+            "price": 231,
+            "stars": 5,
+            "wifi": true,
+            "piscina": false,
+            "balneario": false,
+            "parking": false,
+            "recommended": true,
+            "offer": 0
+            ,
+            "reviews": [
+                {
+                    "id": 1,
+                    "user-id": 1,
+                    "user-rating": 5,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                },
+                {
+                    "id": 2,
+                    "user-id": 2,
+                    "user-rating": 4,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                },
+                {
+                    "id": 3,
+                    "user-id": 3,
+                    "user-rating": 4.5,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                }
+            ]
+        },
+        {
+            "id": 5,
+            "name": "Eurostars Gran Hotel La Toja",
+            "address": "Illa da Toxa, S/N, 36991, O Grove, Galicia",
+            "city": "O Grove",
+            "region": "Galicia",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+            "imgD": "assets/sm/gran.jpg",
+            "imgH": "assets/gran/gran.jpg",
+            "imgH1": "assets/gran/gran1.jpg",
+            "imgHR": "assets/gran/gran2.jpg",
+            "singleRooms":20,
+            "doubleRooms": 20,
+            "tripleRooms":10,
+            "rating": 4,
+            "price": 115,
+            "stars": 5,
+            "wifi": true,
+            "piscina": true,
+            "balneario": true,
+            "parking": true,
+            "recommended": true,
+            "offer": 10,
+            "reviews": [
+                {
+                    "id": 1,
+                    "user-id": 1,
+                    "user-rating": 5,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                },
+                {
+                    "id": 2,
+                    "user-id": 2,
+                    "user-rating": 4,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                },
+                {
+                    "id": 3,
+                    "user-id": 3,
+                    "user-rating": 4.5,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                }
+            ]
+        },
+        {
+            "id": 6,
+            "name": "O Portelo Rural",
+            "address": "Rua Portelo 20, 32660 Allariz, Galicia",
+            "city": "Allariz",
+            "region": "Galicia",
+            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ",
+            "imgD": "assets/sm/port.jpg",
+            "imgH": "assets/port/port.jpg",
+            "imgH1": "assets/port/port1.jpg",
+            "imgHR": "assets/port/port2.jpg",
+            "singleRooms":20,
+            "doubleRooms": 20,
+            "tripleRooms":10,
+            "rating": 4.5,
+            "price": 55,
+            "wifi": true,
+            "stars": 2,
+            "piscina": false,
+            "balneario": false,
+            "parking": false,
+            "recommended": false,
+            "offer": 5,
+            "reviews": [
+                {
+                    "id": 1,
+                    "user-id": 1,
+                    "user-rating": 5,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                },
+                {
+                    "id": 2,
+                    "user-id": 2,
+                    "user-rating": 4,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                },
+                {
+                    "id": 3,
+                    "user-id": 3,
+                    "user-rating": 4.5,
+                    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt"
+                }
+            ]
+        }
+    ]
+}

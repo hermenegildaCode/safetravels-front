@@ -1,0 +1,27 @@
+<!-- <h2>Have a glimpse of our juicy offers!</h2> -->
+<div class="all">
+    <h2> <span class="unicorn-dark-theme">Hot</span> Deals!</h2>
+    <div class="offers">
+        <ng-container *ngFor="let hotel of dataList">
+            <mdb-card class="eachcard" *ngIf="hotel.discount>0">
+                <div class="view imgdiv rgba-white-slight waves-light" mdbWavesEffect>
+                    <a  [routerLink]="['/hotel', hotel.id]">
+                        <mdb-card-img src="./../../assets/sm/{{hotel.name}}.jpg" alt="img {{hotel.name}}" class="ht"></mdb-card-img>
+                    </a>
+                </div>
+                <mdb-card-body>
+                    <a [routerLink]="['/hotel', hotel.id]" class="hotelName text-danger">
+                        <h3>{{hotel.name}}</h3>
+                    </a>
+                    <p class="text-body"> <a>{{ hotel.city}}, {{ hotel.province }}</a> <span
+                            class="starting text-success"> From 50€ </span> </p>
+                    <button  [routerLink]="['/hotel', hotel.id]" mat-fab color="warn" class="offers">
+                        {{hotel.discount}}% off
+                    </button>
+                    <!-- <button mat-raised-button color="accent">Accent</button> -->
+                </mdb-card-body>
+
+            </mdb-card>
+        </ng-container>
+    </div>
+</div>
