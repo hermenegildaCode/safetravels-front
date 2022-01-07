@@ -73,7 +73,7 @@ export class HdataService {
 
   // rooms methods
   getAllRoomsByHotel(id: any): Observable<Room[]> {
-    return this.httpClient.get<Room[]>(UrlService+`hotel/${id}/rooms`);
+    return this.httpClient.get<Room[]>(UrlService+`/hotel/${id}/rooms`);
   }
   getAllRooms(): Observable<Room[]> {
     return this.httpClient.get<Room[]>(this.baseRoomsUrl);
@@ -87,16 +87,16 @@ export class HdataService {
     return this.httpClient.get<Booking[]>(`${this.baseBookingsUrl}/${username}`);
    }
    getBookingById(id: any): Observable<Booking> {
-    return this.httpClient.get<Booking>(UrlService+`bookingById/${id}`);
+    return this.httpClient.get<Booking>(UrlService+`/bookingById/${id}`);
    }
    getHotelByBookingsHotelId(id: any):Observable<Hotel> {
-     return this.httpClient.get<Hotel>(UrlService+`hotelByHotelId/${id}`);
+     return this.httpClient.get<Hotel>(UrlService+`/hotelByHotelId/${id}`);
    }
    postBooking(booking: Booking): Observable<Booking>{
-     return this.httpClient.post<Booking>(UrlService+`addBooking`, booking);
+     return this.httpClient.post<Booking>(UrlService+`/addBooking`, booking);
    }
    updateBooking(booking: Booking): Observable<Booking>{
-    return this.httpClient.post<Booking>(UrlService+`updateBooking`, booking);
+    return this.httpClient.post<Booking>(UrlService+`/updateBooking`, booking);
   }
 
      // my previous json server data, stored in db.json
