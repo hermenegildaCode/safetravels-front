@@ -7,6 +7,7 @@ import { UserService } from './../../user.service';
 import { HdataService } from './../../hdata.service';
 import { Booking } from './../../models/booking.model';
 import { Hotel } from './../../models/hotel.model';
+import { environment } from './../../../environments/environment.prod';
 
 @Component({
   selector: 'app-bookings',
@@ -60,7 +61,7 @@ export class BookingsComponent implements OnInit {
       this.currentUser = this.token.getUser();
       this.username = user.username;
       this.email = user.email;
-      this.bookingsByUserUrl = 'http://localhost:8080/bookings/' + this.currentUser.username;
+      this.bookingsByUserUrl = environment.baseUrl + '/bookings/' + this.currentUser.username;
       this.getBookingsByUsername(this.username);
       // console.log("user", user);
       // console.log("this.username", this.username);
