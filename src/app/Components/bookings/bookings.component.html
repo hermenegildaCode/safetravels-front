@@ -7,7 +7,8 @@
                     *ngIf="numberOfBookings !=null && numberOfBookings != 0; else noBookings">
                     <h1>Bookings List</h1>
                     <ng-container *ngFor="let booking of bookings">
-                        <a [routerLink]="['/booking', booking.roomId]">
+                        <!-- <a [routerLink]="['/booking', booking.roomId]"> -->
+                      <a href="">
                         <div class="eachBooking">
                             <p class="hotelplace">
                                 <!-- {{hotel.name}} -->
@@ -63,7 +64,7 @@
                                 </div>
                             </div>
                         </div>
-                        </a>
+                      </a>
                     </ng-container>
                     <app-footer></app-footer>
                     <!-- </ng-container> -->
