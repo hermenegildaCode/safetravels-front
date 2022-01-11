@@ -73,7 +73,7 @@ export class HdataService {
 
   // rooms methods
   getAllRoomsByHotel(id: any): Observable<Room[]> {
-    return this.httpClient.get<Room[]>(this.baseHotelsUrl+`/${id}/rooms`);
+    return this.httpClient.get<Room[]>(environment.baseUrl+`hotel/${id}/rooms`);
   }
   getAllRooms(): Observable<Room[]> {
     return this.httpClient.get<Room[]>(this.baseRoomsUrl);
