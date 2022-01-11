@@ -11,12 +11,12 @@
         <a [routerLink]="['/safety-regulations']" routerLinkActive="router-link-active">Why we are safe</a>
         <a href="">Our vision</a>
         <a href="">Our mission</a>
-        <a href="">Work with us!</a>
+        <a [routerLink]="['/contact']">Work with us!</a>
     </div>
     <div class="col col2">
         <p><b class="text-white">Reach us</b></p>
-        <a href="">Any questions? Contact Us <i class="fas fa-headphones"></i></a>
-        <a href="">Become a partner</a>
+        <a [routerLink]="['/contact']">Any questions? Contact Us <i class="fas fa-headphones"></i></a>
+        <a [routerLink]="['/contact']">Become a partner</a>
         <a href="">Advertise</a>
         <a href="">Rewards</a>
     </div>
@@ -30,7 +30,7 @@
     <div class="col col4">
         <p><b class="text-white">Other useful information</b></p>
         <a>Our affiliates </a>
-        <a>Safety guide</a>
+        <a [routerLink]="['/safety-regulations']" routerLinkActive="router-link-active">Safety guide</a>
         <a href=""> Why Galicia</a>
         <a href="">Holiday destinations</a>
     </div>
