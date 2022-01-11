@@ -152,6 +152,7 @@ export class HotelDetailsComponent implements OnInit {
       checkinDate: this.datepipe.transform(this.fechaInicio, 'yyyy-MM-dd'),
       checkoutDate: this.datepipe.transform(this.fechaFin, 'yyyy-MM-dd'),
       breakfastIncluded: true,
+      freecancellation: true,
       price: roomPrice
     };
     if(this.isLoggedIn == true){
