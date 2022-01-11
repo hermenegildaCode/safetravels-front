@@ -60,7 +60,7 @@ export class BookingsComponent implements OnInit {
       this.currentUser = this.token.getUser();
       this.username = user.username;
       this.email = user.email;
-      this.bookingsByUserUrl = environment.baseUrl + '/bookings/' + this.currentUser.username;
+      this.bookingsByUserUrl = environment.baseUrl + 'bookings/' + this.currentUser.username;
       this.getBookingsByUsername(this.username);
       // console.log("user", user);
       // console.log("this.username", this.username);

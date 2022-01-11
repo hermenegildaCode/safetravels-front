@@ -46,7 +46,7 @@ export class HdataService {
     // return this.httpClient.get<Hotel[]>(`${this.baseHotelsUrl}?province=${province}`);
   }
   getHotelsByCity(city: any): Observable<Hotel[]> {
-    return this.httpClient.get<Hotel[]>(`${environment.baseUrl}/hotelsByCity/${city}`);
+    return this.httpClient.get<Hotel[]>(`${environment.baseUrl}hotelsByCity/${city}`);
   }
   updateHotel(id: any, data: any): Observable<any> {
     return this.httpClient.put(`${this.baseHotelUrl}/${id}`, data);
