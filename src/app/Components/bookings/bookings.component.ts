@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatTabsModule } from '@angular/material/tabs';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { TokenStorageService } from 'src/app/token-storage.service';
 import { UserService } from './../../user.service';
 import { HdataService } from './../../hdata.service';
@@ -27,7 +26,7 @@ export class BookingsComponent implements OnInit {
   private signedToNl: boolean;
   private hotel: Hotel;
   isChecked = true;
-  formGroup: FormGroup;
+  // formGroup: FormGroup;
   currentUser: any;
   bookingsByUserUrl: string;
   bookingsByUser: any;
@@ -40,17 +39,17 @@ export class BookingsComponent implements OnInit {
   showUserBoard = false;
   private roles: string[] = [];
   today: Date;
-  constructor(formBuilder: FormBuilder, private http: HttpClient, private token: TokenStorageService,
+  constructor(private http: HttpClient, private token: TokenStorageService,
     private userService: UserService, private hDataService: HdataService) {
     this.numberOfReviews = 0;
     this.bookingCompleted = true;
     this.currencies = ['€ Euro', 'KRW Korean Won', '£ Pound Sterling', 'USD American Dollar', 'JPY Japanese Yen', 'CNY Chinese Yuan'];
     this.selectedCurrency = '€ Euro';
     this.signedToNl = true;
-    this.formGroup = formBuilder.group({
-      enableWifi: '',
-      acceptTerms: ['', Validators.requiredTrue]
-    });
+    // this.formGroup = formBuilder.group({
+    //   enableWifi: '',
+    //   acceptTerms: ['', Validators.requiredTrue]
+    // });
     this.today = new Date();
   }
 

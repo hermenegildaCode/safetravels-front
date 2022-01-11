@@ -36,8 +36,7 @@
                                                 <mat-icon>more_vert</mat-icon>
                                             </button>
                                             <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                                <div
-                                                    *ngIf="bookingCompleted !=null && bookingCompleted == true ; else bookingIncomplete">
+                                                <div *ngIf="bookingCompleted !=null && bookingCompleted == true ; else bookingIncomplete">
                                                     <a class="dropdown-item" href="#"> Remove booking </a>
                                                     <a class="dropdown-item" href="#"> Book Again </a>
                                                 </div>
@@ -133,9 +132,9 @@
                 <ng-template #noReviews>
                     <div class="entireContainer">
                         <div class="glass-panel">
-                            <h1><a href="https://superdevresources.com/glassmorphism-ui-css/" target="_blank">You don't
+                            <h1>You don't
                                     have
-                                    any reviews yet.</a></h1>
+                                    any reviews yet.</h1>
                             <p>Take a look at our hotel selection to find amazing choices of safe leisure adequate to
                                 your
                                 needs!</p>
