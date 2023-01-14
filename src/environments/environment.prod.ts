@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://safetravels.fly.dev/web/'
+  baseUrl: 'https://safetravelz.fly.dev/web/'
 };
