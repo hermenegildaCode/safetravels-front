@@ -1,4 +1,4 @@
 export const environment = {
   production: true,
-  baseUrl: 'https://safetravelz.herokuapp.com/web/'
+  baseUrl: 'https://safetravels.fly.dev/web/'
 };
